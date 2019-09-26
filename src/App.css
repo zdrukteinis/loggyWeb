@@ -1,26 +1,204 @@
-.App {
-  text-align: center;
+body {
+  background-color: #282c34;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
+  margin-bottom: 5vh;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 35vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-top: 10vh;
+}
+
+.Modal-Background {
+  colore: red;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.Login .form-label {
+  font-size: calc(1px + 2vmin);
+  color: white;
+}
+
+.Login button {
+  width: calc(20px + 15vmin);
+}
+
+.NavBar {
+  margin-right: 20vw;
+  margin-top: 2vh;
+  margin-left: 8vw;
+}
+.NavBar .logo {
+  pointer-events: none;
+  height: 3vmax;
+}
+
+.NavBar a {
+  font-size: calc(6px + 1vmin);
+  margin-left: 2vw;
+  text-decoration: none;
+  color: #e83e8c;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  margin-top: 1vh;
+}
+
+.NavBar a:hover {
+  text-decoration: none;
+  color: #e83e8c;
+}
+
+.Success img {
+  height: 3vmax;
+  animation: Registration-successfull-move infinite 1s linear;
+}
+
+.Error {
+  font-size: calc(7px + 1vmin);
+  color: white;
+}
+
+.Dashboard {
+  color: white;
+  margin-top: 10vh;
+}
+
+.Dashboard h2,
+h4 {
+  color: #61dafb;
+}
+
+.Dashboard img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.Unfollow-List {
+  display: flex;
+  align-items: flex-start;
+  /* display: flex; */
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.Unfollow-List .Unfollow-Item {
+  width: 30%;
+}
+
+.Unfollow-List img {
+  width: 110px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.Unfollow-List .Unfollow-Item p {
+  color: #e83e8c;
+}
+
+.Unfollow-List .Unfollow-Item hr {
+  background: #61dafb;
+}
+
+.Unfollow-List .UnFollow-All {
+  min-width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bordered {
+  border: 1px solid #61dafb;
+}
+
+.Dashboard .bio {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.Dashboard .stats {
+  display: flex;
+}
+
+.Dashboard .stats > div {
+  flex: 1;
+}
+
+.modal-header {
+  color: #61dafb;
+  border-bottom: 1px solid #61dafb;
+}
+
+.modal-header .close {
+  color: #61dafb;
+  text-shadow: none;
+}
+
+.modal-content {
+  background: #282c34;
+  color: white;
+}
+
+.modal-footer {
+  border-top: 1px solid #61dafb;
+}
+
+.Dashboard .user-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  /* display: flex; */
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* .Dashboard .user-content > div {
+  width: 45%;
+} */
+
+input[type="file"] {
+  visibility: hidden;
+  position: absolute;
+}
+
+.SchedulePost .upload-image {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.SchedulePost .upload-image img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 0;
 }
 
 @keyframes App-logo-spin {
@@ -29,5 +207,57 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes Registration-successfull-move {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0px, 1px, 0px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .Dashboard .user-content {
+    max-width: 80vw;
+  }
+  .Dashboard .user-content > div {
+    width: 45%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .Dashboard .user-content {
+    max-width: 90vw;
+  }
+  .Dashboard .user-content > div {
+    width: 45%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .Dashboard .user-content {
+    max-width: 100vw;
+  }
+  .Dashboard .user-content > div {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .Dashboard .user-content {
+    max-width: 90vw;
+    flex-direction: column;
+    margin-bottom: 10vh;
+  }
+
+  .Dashboard .user-content > div {
+    width: 90%;
+  }
+
+  .Dashboard .user-content .user-actions {
+    margin-top: 5vh;
   }
 }
